@@ -11,7 +11,7 @@ const UserList = () => {
       setList(data.users);
     };
     fetchData();
-  }, []);
+  }, [list]);
 
   const deleteUser = async (id) => {
     await axios.delete(`https://api-users-production.up.railway.app/api/v1/users/${id}`);
